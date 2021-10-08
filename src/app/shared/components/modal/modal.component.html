@@ -1,0 +1,36 @@
+<div class="modal-alert">
+	<div class="backdrop-alert" (click)="onCloseModal()"></div>
+	<div class="content-alert">
+		<div class="header">
+			<div class="closeModal">
+				<span class="material-icons-outlined icon" (click)="onCloseModal()">
+					close
+				</span>
+			</div>
+			<div class="modalTitle">
+				<h2>Juegos añadidos al carrito</h2>
+				<p> <span>Total:</span> ${{priceTotal}} </p>
+			</div>
+		</div>
+		<div class="content-modal">
+			<div *ngIf="gameSelect.length <= 0 ">
+				<p class="informative-text">No tienes juegos en el carrito agregados.</p>
+			</div>
+			<div class="card-modal" *ngIf="gameSelect.length > 0 ">
+				<div class="game" *ngFor="let game of gameSelect; let i = index">
+					<div class="type-game">
+						<img src="{{game.thumb}}" alt="">
+						<p> {{game.external}} </p>
+					</div>
+					<div class="type-info">
+						<p class="price-game" > <span>Precio</span> ${{game.cheapest}}</p>
+						<span class="material-icons delete" (click)="deleteGame(i)">
+							delete
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

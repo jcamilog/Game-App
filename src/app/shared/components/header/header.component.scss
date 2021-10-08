@@ -1,0 +1,163 @@
+@import './../../../../assets/styles/colors.scss';
+
+nav {
+    display: grid;
+    grid-template-columns: 20% auto 20% 20%;
+    background-color: $color-neutral;
+    height: 80px;
+    border: $borders;
+    box-shadow: $shadow-global;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    align-items: center;
+        .logo {
+            .logo-content {
+                display: flex;
+                width: 200px;
+                height: 120px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px 0px 16px 16px;
+                background-color: $primary-color;
+                    img {
+                        width: 100px;
+                    }
+            }
+        }
+        .search {
+            height: 82px;
+            .search-content {
+                position: relative;
+                .material-icons-round {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 5px;
+                }
+                 input {
+                     text-decoration: none;
+                    padding: 0 40px;
+                    width: 80%;
+                    height: 30px;
+                    border-radius: 8px;
+                    border: none;
+                    border: 1px solid #E5E7EB;
+                 }::placeholder {
+                    font-weight: bold;
+                }
+            }
+        }
+        .card {
+            cursor: pointer;
+            justify-content: center;
+            height: 82px;
+            display: flex;
+            .cart-text {
+                text-align: center;
+                color: $primary-color;
+                font-weight: bold;
+            }
+            .card-icon {
+                position: relative;
+                .number {
+                    left: 15px;
+                    top: 10px;
+                    position: absolute;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $primary-color;
+                    text-align: center;
+                        span {
+                            font-size: 15px;
+                            font-weight: 300;
+                            color: $color-neutral;
+                        }
+                }
+            }
+        }
+        .profile {
+            justify-content: center;
+            display: flex;
+            height: 82px;
+            .profile-name {
+                text-align: center;
+                color: $primary-color;
+                font-weight: bold;
+            }
+        }
+    .icon {
+        color: $primary-color;
+    }
+    .menu {
+        text-align: end;
+        height: 82px;
+        display: none;
+        position: relative;
+            .menuIcon {
+                cursor: pointer;
+                color: $primary-color;
+            }
+        .menu-info {
+            position: absolute;
+            right: 0px;
+            width: 80px;
+            height: 80px;
+            padding: 8px;
+            background: $color-neutral;
+            border: $borders;
+            box-shadow: $shadow-global;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                .icon {
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                }
+        }
+    }
+}
+
+@media screen and (max-width:1099px){
+    nav {
+        grid-template-columns: 40% 40% 20%;
+        .profile{
+            display: none;
+        }
+        .card {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    nav {
+        grid-template-columns: 30% auto 10%;
+    }
+}
+@media screen and (max-width:700px){
+    nav {
+        grid-template-columns: auto 20%;
+        .logo {
+            display: none;
+        }
+        .menu {
+            .menu-info {
+                right: 2px;
+            }
+        }
+    }
+}
+@media screen and (max-width:430px){
+    nav {
+        .menu {
+            .menu-info {
+                right: 0px;
+            }
+        }
+    }
+}

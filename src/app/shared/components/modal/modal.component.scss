@@ -1,0 +1,136 @@
+@import './../../../../assets/styles/colors.scss';
+
+.modal-alert {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+    .backdrop-alert {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        z-index: 49;
+        cursor: pointer;
+        background: rgba(245, 245, 255, 0.85);
+    }
+    .content-alert {
+        overflow-y: scroll;
+        padding: 16px;
+        width: 500px;
+        height: 500px;
+        background: $color-background;
+        border: $borders;
+        box-sizing: border-box;
+        box-shadow: -4px -4px 4px #ffffff, 4px 4px 4px rgba(134, 141, 165, 0.1);
+        border-radius: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        .header {
+            padding: 16px;
+            border-radius: 16px;
+            position: sticky;
+            top: 0;
+            background-color: $color-background;
+            height: 80px;
+            border: $borders;
+            box-shadow: $shadow-global;
+            margin-bottom: 10px;
+            .closeModal {
+                .icon {
+                    cursor: pointer;
+                    color: $primary-color;
+                }
+            }
+            .modalTitle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    color: $primary-color;
+                    font-size: 20px;
+                }
+                p {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .content-modal {
+            .informative-text {
+                text-align: center;
+                font-weight: bold;
+            }
+            .card-modal{
+                .game {
+                    margin-bottom: 10px;
+                    padding: 16px;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    border: $borders;
+                    box-shadow: $shadow-global;
+                    border-radius: 8px;
+                    .type-game {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 100px;
+                            height: 50px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .type-info {
+                        display: flex;
+                        .price-game {
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                        .delete {
+                            display: none;
+                        }
+
+                    }
+                    &:hover {
+                        .type-info {
+                            .delete {
+                                color: $primary-color;
+                                display: block;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .modal-alert {
+        .content-alert {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .modal-alert {
+        .content-alert {
+            .content-modal {
+                .card-modal{
+                    .game {
+                        display: block;
+                    }
+    
+                }
+            }
+        }
+    }
+}

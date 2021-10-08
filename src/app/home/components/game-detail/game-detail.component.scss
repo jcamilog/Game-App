@@ -1,0 +1,58 @@
+@import './../../../../assets/styles/colors.scss';
+@import './../../../../assets/styles/class.scss';
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    .content-card {
+        overflow: auto;
+        padding: 16px;
+        background: $color-neutral;
+        border: $borders;
+        box-shadow: $shadow-global;
+        border-radius: 8px;
+        .return {
+            margin-bottom: 10px;
+        }
+        .header-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .header-title {
+                display: flex;
+                align-items: center;
+                .header-img {
+                    border-radius: 50%;
+                    width: 80px;
+                    height: 80px;
+                }
+                .header-text {
+                    margin-left: 20px;
+                    font-weight: bold;
+                }
+            }
+
+        }
+        .body-card {
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .footer-card {
+            .footer-prices {
+                .footer-prices--content {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
+                        .prices {
+                            margin-right: 10px;
+                            padding: 16px;
+                            background: $color-neutral;
+                            border: $borders;
+                            box-shadow: $shadow-global;
+                            border-radius: 8px;
+                        }
+                }
+            }
+        }
+    }
+}

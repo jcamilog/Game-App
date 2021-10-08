@@ -1,0 +1,29 @@
+.sub-title {
+    color: $primary-color;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.informative-text {
+    span {
+        color: $primary-color;
+    }
+}
+.button {
+    display: flex;
+    align-items: center;
+    background-color: $button-color;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+        span {
+            color: $color-neutral;
+        }
+        p {
+            color: $color-neutral;
+            font-weight: 300;
+        }
+    &:hover {
+        cursor: pointer;
+        background-color: $button-hover;
+    }
+}

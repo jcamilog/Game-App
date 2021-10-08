@@ -1,0 +1,108 @@
+@import './../../../../assets/styles/colors.scss';
+
+.content {
+    padding: 64px;
+    .title-content {
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+    .content-info {
+        text-align: center;
+        img {
+            width: 550px;
+            border: $borders;
+            box-shadow: $shadow-global;
+            border-radius: 8px;
+        }
+        .text-info {
+            font-weight: bold;
+        }
+    }
+    .grid-cards {
+        display: grid;
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            .content-skeleton {
+                overflow: hidden;
+                width: 234px;
+                height: 234px;
+                transition: all 0.2s;
+                position: relative;
+                border: $borders;
+                box-shadow: $shadow-global;
+                border-radius: 8px;
+            }
+            .card {
+                display: grid;
+                grid-template-rows: auto 20% 20%;
+                gap: 10px;
+                width: 200px;
+                height: 200px;
+                padding: 16px;
+                background: $color-neutral;
+                border: $borders;
+                box-shadow: $shadow-global;
+                border-radius: 8px;
+                text-align: center;
+                    .content-img {
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100px;
+                        }
+                        span {
+                            display: none;
+                            cursor: pointer;
+                            position: absolute;
+                            right: 10px;
+                            top: 5px;
+                            color: $primary-color;
+                        }
+                        &:hover {
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                    p {
+                        font-weight: 600;
+                    }
+                    a {
+                        width: 50%;
+                        background-color: $button-color;
+                        padding: 8px 20px;
+                        border-radius: 8px;
+                        color: $color-neutral;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 15px;
+                         &:hover {
+                            background-color: $button-hover;
+                         }
+                    }
+            }
+    }
+}
+@media screen and (max-width:700px){
+    .content {
+        .content-info {
+            text-align: center;
+            img {
+                width: 100%;
+                border: $borders;
+                box-shadow: $shadow-global;
+                border-radius: 8px;
+            }
+            .text-info {
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media screen and (max-width:330px){
+    .content {
+        padding: 10px;
+    }
+}

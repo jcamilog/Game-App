@@ -1,0 +1,48 @@
+<nav>
+    <div class="logo">
+        <div class="logo-content">
+            <img src="./../../../../assets/img/Logo.png" alt="">
+        </div>
+    </div>
+    <div class="search">
+        <div class="search-content">
+            <span class="material-icons-round icon">
+                search
+            </span>
+            <input type="text" placeholder="¿Qué estás buscando?" [formControl]="searchFiel">
+        </div>
+    </div>
+    <div class="card" (click)="openModal()">
+        <div class="cart-text"><p>Resumen <br> de compras </p></div>
+        <div class="card-icon">
+            <span class="material-icons-outlined icon">
+                shopping_cart
+            </span>
+            <span class="number"> <span> {{contGames}} </span> </span>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="profile-icon">
+            <span class="material-icons-outlined icon">
+                account_circle
+            </span>
+        </div>
+        <div class="profile-name"><p>Perfil</p></div>
+    </div>
+    <div class="menu">
+        <span class="material-icons-outlined menuIcon" (click)="openMenu()">
+            menu
+        </span>
+        <div class="menu-info" *ngIf="activeMenu === true">
+            <span class="material-icons-outlined icon" (click)="openModal()">
+                shopping_cart
+            </span>
+            <span class="material-icons-outlined icon">
+                account_circle
+            </span>
+        </div>
+    </div>
+</nav>
+<div *ngIf="activeModal === true">
+    <app-modal (closeModal)="openModal()"></app-modal>
+</div>
