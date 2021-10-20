@@ -15,9 +15,10 @@ export class ModalComponent  {
 
   constructor(
     private cartService: CartService
-  ) { 
+  ) {
     this.cartService.cart$
     .subscribe(data => {
+      // TODO: avoid subscribe callbacks
       this.gameSelect = data;
       this.priceTotal = this.gameSelect.reduce((acum, elm) => acum + Number(elm.cheapest) ,0);
     })

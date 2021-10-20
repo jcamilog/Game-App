@@ -118,6 +118,7 @@
   },
   "defaultProject": "cheapshark",
   "cli": {
+    "analytics": "89716f6d-6b69-4032-a424-f87e354818f1",
     "defaultCollection": "@angular-eslint/schematics"
   }
 }

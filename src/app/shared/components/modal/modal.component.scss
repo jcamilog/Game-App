@@ -1,5 +1,7 @@
 @import './../../../../assets/styles/colors.scss';
 
+// TODO: avoid use px instead use em
+
 .modal-alert {
     width: 100vw;
     height: 100vh;
@@ -128,7 +130,7 @@
                     .game {
                         display: block;
                     }
-    
+
                 }
             }
         }
