@@ -33,6 +33,7 @@
         <span class="material-icons-outlined menuIcon" (click)="openMenu()">
             menu
         </span>
+        <!-- TODO: avoid === true because activeModal is a boolean -->
         <div class="menu-info" *ngIf="activeMenu === true">
             <span class="material-icons-outlined icon" (click)="openModal()">
                 shopping_cart
@@ -43,6 +44,7 @@
         </div>
     </div>
 </nav>
+<!-- TODO: avoid === true because activeModal is a boolean -->
 <div *ngIf="activeModal === true">
     <app-modal (closeModal)="openModal()"></app-modal>
 </div>

@@ -1,3 +1,5 @@
+// TODO: This file have 2 spaces should there is only unique way. (use editorconfig and prettier)
+
 export interface gamesResponse {
     cheapest: string;
     cheapestDealID: string;

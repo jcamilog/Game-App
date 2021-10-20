@@ -1,5 +1,7 @@
 @import './../../../../assets/styles/colors.scss';
 @import './../../../../assets/styles/class.scss';
+// TODO: avoid use px instead use em
+
 .content {
     display: flex;
     justify-content: center;

@@ -21,6 +21,7 @@ export class GameDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
+      // TODO: avoid subscribe callbacks
       this.detailGame(id);
     });
   }
@@ -31,7 +32,10 @@ export class GameDetailComponent implements OnInit {
       this.detail = detail;
     })
   }
+  // TODO: space between methods (use prettier)
+  // TODO: This method could have a name more explicit like goBack()
   return() {
+    // TODO: You should use location service by Angular for goBack
     this.router.navigate(['/home'])
   }
 

@@ -12,6 +12,7 @@ import { CartService } from '@core/internalService/cart.service';
 })
 export class HeaderComponent implements OnInit {
   public activeMenu: boolean = false;
+  // TODO: errata: Fiel
   public searchFiel = new FormControl();
   public activeModal: boolean = false;
   public contGames: number = 0;
@@ -29,11 +30,13 @@ export class HeaderComponent implements OnInit {
     this.searchFiel.valueChanges
     .pipe(debounceTime(500))
     .subscribe(value => {
+      // TODO: avoid subscribe callbacks
       this.searchService.searchGame(value);
     });
   }
 
   openMenu(): void {
+    // TODO: this code could be reducing in one line
     if(this.activeMenu === false) {
       this.activeMenu = true;
     }else {
@@ -41,6 +44,7 @@ export class HeaderComponent implements OnInit {
     };
   };
   openModal(): void {
+    // TODO: this code could be reducing in one line
     if(this.activeModal === false) {
       this.activeModal = true;
     }else {

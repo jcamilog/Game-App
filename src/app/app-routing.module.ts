@@ -3,6 +3,8 @@ import { RouterModule, Routes, PreloadAllModules  } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
 
+// TODO: This file have 2 spaces should there is only unique way. (use editorconfig and prettier)
+
 const routes: Routes = [
   {
     path: '',

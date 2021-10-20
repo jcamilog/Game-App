@@ -16,19 +16,21 @@ export class HomeComponent implements OnInit {
   public limit: number = 10;
   public offset: number = 10;
   public progress: boolean = false;
+  // TODO: Why this array is set?
   public dumyCont = [1,2,3,4,5,6,7,8,9,10];
   public search: string = "";
   constructor(
     private gamesService: GamesService,
     private searchService: SearchService,
     private cartService: CartService
-  ) { 
+  ) {
   }
 
   ngOnInit(): void {
     this.searchService.newSearchs$
     .subscribe(value => {
       this.search = value;
+      // TODO: avoid subscribe callbacks
       this.getGames();
     });
   }
@@ -46,9 +48,10 @@ export class HomeComponent implements OnInit {
   };
 
   onScroll(): void {
-    this.limit += this.offset;   
+    this.limit += this.offset;
     this.getGames();
   }
+  // TODO: space between methods (use prettier)
   addCart(game: gamesResponse): void {
     this.cartService.addCart(game);
   }

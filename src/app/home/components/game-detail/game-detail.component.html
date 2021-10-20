@@ -10,11 +10,13 @@
         </div>
         <div class="header-card">
             <div class="header-title">
+              <!-- TODO: use Optional Chaining  -->
                 <img class="header-img" src="{{detail.info.thumb}}" alt="">
                 <p class="header-text"> {{detail?.info?.title}} </p>
             </div>
         </div>
         <section class="body-card">
+            <!-- TODO: use Optional Chaining  -->
             <img class="body-img" src="{{detail.info.thumb}}" alt="">
         </section>
         <section class="footer-card">
@@ -26,7 +28,8 @@
             <div class="footer-prices">
                 <h4  class="sub-title"> Comparacion de precios en distintas tiendas </h4>
                 <div class="footer-prices--content">
-                    <span *ngFor="let detal of detail?.deals" class="prices"> 
+                    <!-- TODO: Errata: detal  -->
+                    <span *ngFor="let detal of detail?.deals" class="prices">
                         <p class="informative-text">  <span>Precio: </span> ${{detal.price}} </p>
                         <p class="informative-text"> <span>Precio al por menor:</span>  {{detal.retailPrice}} </p>
                         <p class="informative-text"> <span>Ahorros:</span> {{detal.savings}} </p>
